@@ -15,9 +15,9 @@ import string
 
 client = cmlapi.default_client(url=os.getenv("CDSW_API_URL").replace("/api/v1", ""), cml_api_key=os.getenv("CDSW_APIV2_KEY"))
 available_runtimes = client.list_runtimes(search_filter=json.dumps({
-    "kernel": "Python 3.10",
-    "edition": "Standard",
-    "editor": "JupyterLab"
+    "kernel": "Python 3.9",
+    "edition": "GovCloud",
+    "editor": "PBJ Workbench"
 }))
 print(available_runtimes)
 
